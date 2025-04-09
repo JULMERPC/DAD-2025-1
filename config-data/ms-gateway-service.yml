@@ -14,11 +14,10 @@ eureka:
 spring:
   cloud:
     gateway:
-
-
       discovery:
         locator:
           enabled: true
+          lower-case-service-id: true
       routes:
         - id: ms-catalogo-service
           uri: lb://ms-catalogo-service
