@@ -19,7 +19,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: catalogo
+        - id: ms-catalogo-service
           uri: lb://ms-catalogo-service
           predicates:
             - Path=/categoria/**
