@@ -68,7 +68,7 @@ public class PagoSeeder implements CommandLineRunner {
     public void run(String... args) {
 
 //        pagoRepository.deleteAll();
-+
+
 
         if (pagoRepository.count() == 0) {
             Pago pago1 = new Pago(null, "Laptop Dell", 1, "PAG001", LocalDateTime.now().minusDays(1));
