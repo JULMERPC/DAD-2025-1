@@ -1,4 +1,4 @@
-package com.example.mspedidos.entity;
+package com.example.msclientes.entity;
 
 
 import jakarta.persistence.*;
@@ -83,7 +83,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Pedido{" +
+        return "Cliente{" +
                 "id=" + id +
                 ", producto='" + producto + '\'' +
                 ", cantidad=" + cantidad +

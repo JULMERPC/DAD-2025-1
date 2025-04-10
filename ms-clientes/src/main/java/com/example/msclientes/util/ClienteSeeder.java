@@ -1,26 +1,26 @@
-package com.example.mspedidos.util;
+package com.example.msclientes.util;
 
-import com.example.mspedidos.entity.Cliente;
-import com.example.mspedidos.repository.ClienteRepository;
+import com.example.msclientes.entity.Cliente;
+import com.example.msclientes.repository.ClienteRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
 @Component
-public class PedidoSeeder implements CommandLineRunner {
-    private final ClienteRepository pedidoRepository;
+public class ClienteSeeder implements CommandLineRunner {
+    private final ClienteRepository clienteRepository;
 
-    public PedidoSeeder(ClienteRepository pedidoRepository) {
-        this.pedidoRepository = pedidoRepository;
+    public ClienteSeeder(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
     }
 
     @Override
     public void run(String... args) {
         // Eliminar todos los pedidos (opcional)
-        // pedidoRepository.deleteAll();
+        // clienteRepository.deleteAll();
 
-        if (pedidoRepository.count() == 0) { // Verifica si la tabla está vacía
+        if (clienteRepository.count() == 0) { // Verifica si la tabla está vacía
             // Crear 5 objetos de pedidos con el constructor adecuado
             Cliente pedido1 = new Cliente(null, "Producto A", 10, "COD001", LocalDateTime.now().minusDays(1));
             Cliente pedido2 = new Cliente(null, "Producto B", 15, "COD002", LocalDateTime.now().minusDays(2));
@@ -29,11 +29,11 @@ public class PedidoSeeder implements CommandLineRunner {
             Cliente pedido5 = new Cliente(null, "Producto E", 30, "COD005", LocalDateTime.now().minusDays(5));
 
             // Guardar en la base de datos
-            pedidoRepository.save(pedido1);
-            pedidoRepository.save(pedido2);
-            pedidoRepository.save(pedido3);
-            pedidoRepository.save(pedido4);
-            pedidoRepository.save(pedido5);
+            clienteRepository.save(pedido1);
+            clienteRepository.save(pedido2);
+            clienteRepository.save(pedido3);
+            clienteRepository.save(pedido4);
+            clienteRepository.save(pedido5);
 
             System.out.println("✅ Datos de pedidos insertados correctamente.");
         } else {

@@ -1,6 +1,6 @@
-package com.example.mspedidos.repository;
+package com.example.msclientes.repository;
 
-import com.example.mspedidos.entity.Cliente;
+import com.example.msclientes.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
